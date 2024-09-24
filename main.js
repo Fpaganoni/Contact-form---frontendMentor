@@ -4,9 +4,13 @@ let checkSupport = () => {
 
   checkboxSupport.addEventListener("click", () => {
     if (checkboxSupport.checked) {
-      support.style.setProperty("--background-support", "#f66f");
+      support.style.setProperty("--background-support", "#0c7d69");
+      support.style.backgroundColor = "rgba(12, 125, 104, 0.150)";
+      support.style.border = "1.3px solid #0c7d69";
     } else {
-      support.style.setProperty("--background-support", "#252525");
+      support.style.setProperty("--background-support", "#ffffff");
+      support.style.backgroundColor = "#ffffff";
+      support.style.border = "1px solid #87a3a6";
     }
   });
 };
@@ -19,9 +23,13 @@ let checkEnquiry = () => {
 
   checkboxEnquiry.addEventListener("click", () => {
     if (checkboxEnquiry.checked) {
-      enquiry.style.setProperty("--background-enquiry", "#f66f");
+      enquiry.style.setProperty("--background-enquiry", "#0c7d69");
+      enquiry.style.backgroundColor = "rgba(12, 125, 104, 0.150)";
+      enquiry.style.border = "1.3px solid #0c7d69";
     } else {
-      enquiry.style.setProperty("--background-enquiry", "#252525");
+      enquiry.style.setProperty("--background-enquiry", "#ffffff");
+      enquiry.style.backgroundColor = "#ffffff";
+      enquiry.style.border = "1px solid #87a3a6";
     }
   });
 };

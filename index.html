@@ -29,17 +29,22 @@
           <ul class="ul-containers">
             <li class="label-containers">
               <label for="first-name">First Name <code>*</code></label>
-              <input type="text" id="first-name" autocomplete="given-name" />
+              <input
+                type="text"
+                id="first-name"
+                autocomplete="given-name"
+                class="form-input"
+              />
             </li>
             <li class="label-containers">
               <label for="last-name">Last Name <code>*</code></label>
-              <input type="text" id="last-name" />
+              <input type="text" id="last-name" class="form-input" />
             </li>
             <li class="label-containers">
               <label for="email-address">Email Address <code>*</code></label>
-              <input type="email" id="email-address" />
+              <input type="email" id="email-address" class="form-input" />
             </li>
-            <li class="label-containers">
+            <li class="label-containers queryChecks">
               <h4 class="queryTitle">Query Type <code>*</code></h4>
 
               <label for="generalEnquiry" class="checkboxs enquiry"
@@ -60,7 +65,7 @@
             </li>
             <li class="label-containers">
               <label for="message">Message <code>*</code></label>
-              <textarea id="message"></textarea>
+              <textarea id="message" class="textArea"></textarea>
             </li>
             <li class="label-containers">
               <input type="checkbox" name="consent" id="consent" />
