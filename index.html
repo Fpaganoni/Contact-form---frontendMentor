@@ -27,19 +27,25 @@
         <h2 class="form-title">Contact Us</h2>
         <div class="form-group">
           <ul class="ul-containers">
-            <li class="label-containers">
-              <label for="first-name">First Name <code>*</code></label>
-              <input
-                type="text"
-                id="first-name"
-                autocomplete="given-name"
-                class="form-input"
-              />
+            <li class="label-for-names">
+              <div class="first-name li-names">
+                <label for="first-name">First Name <code>*</code></label>
+                <input
+                  type="text"
+                  id="first-name"
+                  autocomplete="given-name"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="last-name li-names">
+                <label for="last-name" class="last-name"
+                  >Last Name <code>*</code></label
+                >
+                <input type="text" id="last-name" class="form-input" />
+              </div>
             </li>
-            <li class="label-containers">
-              <label for="last-name">Last Name <code>*</code></label>
-              <input type="text" id="last-name" class="form-input" />
-            </li>
+            <!-- <li class="label-containers li-names"></li> -->
             <li class="label-containers">
               <label for="email-address">Email Address <code>*</code></label>
               <input type="email" id="email-address" class="form-input" />
@@ -47,21 +53,27 @@
             <li class="label-containers queryChecks">
               <h4 class="queryTitle">Query Type <code>*</code></h4>
 
-              <label for="generalEnquiry" class="checkboxs enquiry"
-                >General Enquiry</label
-              ><input
-                id="generalEnquiry"
-                type="checkbox"
-                class="checkboxInput checkboxEnquiry"
-              />
+              <div class="container-flex">
+                <div class="container-enquiry container-checkbox">
+                  <label for="generalEnquiry" class="checkboxs enquiry"
+                    >General Enquiry</label
+                  ><input
+                    id="generalEnquiry"
+                    type="checkbox"
+                    class="checkboxInput checkboxEnquiry"
+                  />
+                </div>
 
-              <label for="supportRequest" class="checkboxs support"
-                >Support Request</label
-              ><input
-                id="supportRequest"
-                type="checkbox"
-                class="checkboxInput checkboxSupport"
-              />
+                <div class="container-support container-checkbox">
+                  <label for="supportRequest" class="checkboxs support"
+                    >Support Request</label
+                  ><input
+                    id="supportRequest"
+                    type="checkbox"
+                    class="checkboxInput checkboxSupport"
+                  />
+                </div>
+              </div>
             </li>
             <li class="label-containers">
               <label for="message">Message <code>*</code></label>
