@@ -67,15 +67,20 @@
               <label for="message">Message <code>*</code></label>
               <textarea id="message" class="textArea"></textarea>
             </li>
-            <li class="label-containers">
-              <input type="checkbox" name="consent" id="consent" />
+            <li class="label-containers-consent">
+              <input
+                type="checkbox"
+                name="consent"
+                id="consent"
+                class="input-consent"
+              />
               <label for="consent"
                 >I consent to being contacted by the team <code>*</code></label
               >
             </li>
           </ul>
 
-          <button type="submit" class="form-button">Submit</button>
+          <div type="submit" id="submit-button" class="form-button">Submit</div>
         </div>
       </form>
     </div>
