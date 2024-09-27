@@ -2,6 +2,7 @@
   /*  PRIMARY COLOURS */
   --Green200-lighter: #dff1e7;
   --Green-600-medium: #0c7d69;
+  --green-800-dark: #084e41;
   --Red: #d73c3c;
 
   /* NEUTRAL COLOURS */
@@ -16,7 +17,7 @@
   --borderInputs: 6px;
 
   /* TRANSITION ::AFTER */
-  --transitions: all 0.5s linear;
+  --transitions: all 0.3s linear;
 }
 
 * {
@@ -31,7 +32,7 @@ code {
 }
 
 label {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 body .container {
@@ -41,6 +42,15 @@ body .container {
   margin: 0 auto;
   align-items: center;
   background-color: var(--Green200-lighter);
+}
+
+.error-required {
+  color: var(--Red);
+  display: none;
+}
+
+.error-required-show {
+  display: block;
 }
 
 .container .form-container {
@@ -282,7 +292,8 @@ body .container {
   .label-containers-consent {
   list-style: none;
   display: flex;
-  gap: 1.2em;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .container
@@ -290,6 +301,17 @@ body .container {
   .form-group
   .ul-containers
   .label-containers-consent
+  .consent-container {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.container
+  .form-container
+  .form-group
+  .ul-containers
+  .label-containers-consent
+  .consent-container
   .input-consent {
   appearance: none;
   padding: 0.5em;
@@ -306,6 +328,7 @@ body .container {
   .form-group
   .ul-containers
   .label-containers-consent
+  .consent-container
   .input-consent:checked {
   background-color: #0c7d69;
   background-image: url(assets/images/check.png);
@@ -313,6 +336,16 @@ body .container {
   background-repeat: no-repeat;
   background-size: cover;
   outline: 1px solid var(--Green-600-medium);
+}
+
+.container
+  .form-container
+  .form-group
+  .ul-containers
+  .label-containers-consent
+  .consent-container
+  .label-consent {
+  cursor: pointer;
 }
 
 .container .form-container .form-group .form-button {
@@ -325,6 +358,10 @@ body .container {
   cursor: pointer;
   text-align: center;
   margin-top: 1.8em;
+}
+
+.container .form-container .form-group .form-button:hover {
+  background-color: var(--green-800-dark);
 }
 
 /* MEDIA QUERYS 768px */

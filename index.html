@@ -36,6 +36,9 @@
                   autocomplete="given-name"
                   class="form-input"
                 />
+                <p class="error-required" id="firstNameRequired">
+                  This field is required
+                </p>
               </div>
 
               <div class="last-name li-names">
@@ -43,12 +46,18 @@
                   >Last Name <code>*</code></label
                 >
                 <input type="text" id="last-name" class="form-input" />
+                <p class="error-required" id="lastNameRequired">
+                  This field is required
+                </p>
               </div>
             </li>
-            <!-- <li class="label-containers li-names"></li> -->
+
             <li class="label-containers">
               <label for="email-address">Email Address <code>*</code></label>
               <input type="email" id="email-address" class="form-input" />
+              <p class="error-required" id="emailRequired">
+                Please enter a valid email address
+              </p>
             </li>
             <li class="label-containers queryChecks">
               <h4 class="queryTitle">Query Type <code>*</code></h4>
@@ -74,21 +83,34 @@
                   />
                 </div>
               </div>
+              <p class="error-required" id="queryRequired">
+                Please select a query type
+              </p>
             </li>
             <li class="label-containers">
               <label for="message">Message <code>*</code></label>
               <textarea id="message" class="textArea"></textarea>
+              <p class="error-required" id="messageRequired">
+                This field is required
+              </p>
             </li>
             <li class="label-containers-consent">
-              <input
-                type="checkbox"
-                name="consent"
-                id="consent"
-                class="input-consent"
-              />
-              <label for="consent"
-                >I consent to being contacted by the team <code>*</code></label
-              >
+              <div class="consent-container">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  id="consent"
+                  class="input-consent"
+                />
+                <label for="consent" class="label-consent"
+                  >I consent to being contacted by the team
+                  <code>*</code></label
+                >
+              </div>
+
+              <p class="error-required" id="consentRequired">
+                This field is required
+              </p>
             </li>
           </ul>
 
@@ -98,11 +120,11 @@
     </div>
 
     <!--   This field is required  This field is
-    required  Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required 
+    required   This field is
+    required Query Type General Enquiry Support Request  Message This field is required 
     To submit this form, please consent to being contacted Submit Message Sent!
     Thanks for completing the form. We'll be in touch soon! -->
     <script src="main.js"></script>
+    <script src="required.js"></script>
   </body>
 </html>
