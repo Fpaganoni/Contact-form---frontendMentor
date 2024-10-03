@@ -47,6 +47,7 @@ body .container {
 .error-required {
   color: var(--Red);
   display: none;
+  font-size: 0.9rem;
 }
 
 .error-required-show {
@@ -405,5 +406,14 @@ body .container {
 
   .container .form-container .form-group .ul-containers .label-for-names {
     gap: 0.8rem;
+  }
+
+  .container
+    .form-container
+    .form-group
+    .ul-containers
+    .label-containers
+    .textArea {
+    height: 100px;
   }
 }
