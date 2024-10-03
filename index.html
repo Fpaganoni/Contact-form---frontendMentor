@@ -23,6 +23,20 @@
   </head>
   <body>
     <div class="container">
+      <div class="message-container">
+        <div class="img-message">
+          <img
+            src="assets/images/check.png"
+            alt="check"
+            width="18px"
+            class="img-check"
+          />
+          <h4 class="message-title">Message Sent!</h4>
+        </div>
+        <p class="message-paragraph">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
       <form action="submit" class="form-container">
         <h2 class="form-title">Contact Us</h2>
         <div class="form-group">
@@ -89,7 +103,11 @@
             </li>
             <li class="label-containers">
               <label for="message-input">Message <code>*</code></label>
-              <textarea id="message-input" class="textArea"></textarea>
+              <textarea
+                id="message-input"
+                class="textArea"
+                maxlength="250"
+              ></textarea>
               <p class="error-required" id="messageRequired">
                 This field is required
               </p>
@@ -125,7 +143,7 @@
     required   This field is
     required Query Type General Enquiry Support Request  Message This field is required 
      Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon! -->
+     -->
     <script src="queryType.js"></script>
     <script src="required.js"></script>
   </body>

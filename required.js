@@ -1,13 +1,11 @@
-/* Validation of name, lastname and email inputs  */
+/* Validation of name, lastname */
 
 const inputsValidation = () => {
   const firstNameRequired = document.querySelector("#firstNameRequired"),
-    lasNameRequired = document.querySelector("#lastNameRequired"),
-    emailRequired = document.querySelector("#emailRequired");
+    lasNameRequired = document.querySelector("#lastNameRequired");
 
   const inputName = document.querySelector("#first-name"),
-    inputLastName = document.querySelector("#last-name"),
-    inputEmail = document.querySelector("#email-address");
+    inputLastName = document.querySelector("#last-name");
 
   if (inputName.value === "") {
     inputName.style.border = "1px solid #d73c3c";
@@ -24,6 +22,16 @@ const inputsValidation = () => {
     inputLastName.style.border = "1px solid #87a3a6";
     lasNameRequired.style.display = "none";
   }
+};
+
+/* Validation of email input w/ regex */
+
+let emailValidation = () => {
+  const emailRequired = document.querySelector("#emailRequired"),
+    inputEmail = document.querySelector("#email-address");
+  const emailValido = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
 
   if (inputEmail.value === "") {
     inputEmail.style.border = "1px solid #d73c3c";
@@ -31,6 +39,11 @@ const inputsValidation = () => {
   } else {
     inputEmail.style.border = "1px solid #87a3a6";
     emailRequired.style.display = "none";
+  }
+
+  if (!emailValido(inputEmail.value)) {
+    inputEmail.style.border = "1px solid #d73c3c";
+    emailRequired.style.display = "block";
   }
 };
 
@@ -40,7 +53,10 @@ const queryValidation = () => {
   const queryRequired = document.querySelector("#queryRequired"),
     enquiryInput = document.querySelector("#generalEnquiry"),
     requestInput = document.querySelector("#supportRequest");
+
   if (!enquiryInput.checked && !requestInput.checked) {
+    queryRequired.style.display = "block";
+  } else if (enquiryInput.checked && requestInput.checked) {
     queryRequired.style.display = "block";
   } else {
     queryRequired.style.display = "none";
@@ -52,6 +68,7 @@ const queryValidation = () => {
 const messageValidation = () => {
   const messageRequired = document.querySelector("#messageRequired"),
     messageInput = document.querySelector("#message-input");
+
   if (messageInput.value.length === 0) {
     messageInput.style.border = "1px solid #d73c3c";
     messageRequired.style.display = "block";
@@ -63,7 +80,7 @@ const messageValidation = () => {
 
 /* Validation of content input */
 
-let consentValidation = () => {
+const consentValidation = () => {
   const consentRequired = document.querySelector("#consentRequired"),
     consentInput = document.querySelector("#consent-input");
   if (!consentInput.checked) {
@@ -73,6 +90,12 @@ let consentValidation = () => {
   }
 };
 
+/* Message sent succes */
+
+const messageSent = () => {};
+
+/* Button submit listener */
+
 const buttonSubmit = document.querySelector("#submit-button");
 buttonSubmit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -80,4 +103,5 @@ buttonSubmit.addEventListener("click", (e) => {
   queryValidation();
   messageValidation();
   consentValidation();
+  emailValidation();
 });

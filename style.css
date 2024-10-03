@@ -54,6 +54,37 @@ body .container {
   display: block;
 }
 
+.container .message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+  top: 50px;
+  width: 400px;
+  background-color: var(--Grey900-darker);
+  color: var(--White);
+  padding: 1.4rem 1.2rem;
+  border-radius: 0.8rem;
+  transition: all 0.5s linear;
+}
+
+.container .message-container .img-message {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.container .message-container .img-check {
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.container .message-container .message-paragraph {
+  font-size: 0.9rem;
+  color: var(--Grey500-medium);
+}
+
 .container .form-container {
   margin: 50px auto;
   width: 90%;
