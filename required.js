@@ -90,9 +90,30 @@ const consentValidation = () => {
   }
 };
 
-/* Message sent succes */
+/* show successful sending message */
 
-const messageSent = () => {};
+const showSuccesfullMessage = () => {
+  const messageContainer = document.querySelector("#message-container");
+  // Declare all the required for a validation
+  const firstNameRequired =
+      document.querySelector("#firstNameRequired").style.display,
+    lasNameRequired = document.querySelector("#lastNameRequired").style.display,
+    emailRequired = document.querySelector("#emailRequired").style.display,
+    queryRequired = document.querySelector("#queryRequired").style.display,
+    consentRequired = document.querySelector("#consentRequired").style.display;
+
+  if (
+    firstNameRequired === "none" &&
+    lasNameRequired === "none" &&
+    emailRequired === "none" &&
+    queryRequired === "none" &&
+    consentRequired === "none"
+  ) {
+    messageContainer.style.display = "flex";
+  } else {
+    messageContainer.style.display = "none";
+  }
+};
 
 /* Button submit listener */
 
@@ -104,4 +125,5 @@ buttonSubmit.addEventListener("click", (e) => {
   messageValidation();
   consentValidation();
   emailValidation();
+  showSuccesfullMessage();
 });
