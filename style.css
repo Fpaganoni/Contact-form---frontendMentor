@@ -65,6 +65,11 @@ body .container {
   color: var(--White);
   padding: 1rem;
   border-radius: 0.8rem;
+  transition: scale 0.3s ease;
+
+  @starting-style {
+    scale: 0;
+  }
 }
 
 .container .message-container .img-message {
